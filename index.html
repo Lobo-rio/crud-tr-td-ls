@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Estudos - CRUD dentro de TR (Local Storage)</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Css do Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">JavaScript, Crud com TR (Local Storage)!!</h1>
+            <p class="lead">Este é um simples crud, sem atualização de banco de dados e sim atualizando no Local Storage do Navegador, 
+                as informações serão guardadas no ambiente do navegador e poderão ser apagadas quando achar necessário,
+                todas as informações voltaram ao ponto inicial!</p>
+            <hr class="my-4">
+            <p>Ele usa functions para manipular os elementos da tela.</p>
+        </div>
+
+        <div id="message"></div>
+        
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Sobre-nome</th>
+                    <th scope="col">Nickname</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <form name="form-curd-li" class="form-inline" action="" method="post">
+            <div class="form-group mx-sm-3 mb-2">
+                <input id="name" type="text" class="form-control" name="name" placeholder="Informe o nome...">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <input id="surName" type="text" class="form-control" name="firstName"
+                    placeholder="Informe o sobre-nome...">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <input id="nickName" type="text" class="form-control" name="nickName" placeholder="Informe o apelido">
+            </div>
+            <button id="btnInclude" type="submit" class="btn btn-outline-success mb-2"><i class="fa fa-upload"></i>
+                Incluir</button>
+        </form>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="editTr" tabindex="-1" role="dialog" aria-labelledby="EditTrLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Alterando Dados</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formModal" name="form-modal-li" class="form-inline" action="" method="post">
+                            <fieldset disabled>
+                                <div class="form-group mx-sm-3 mb-2">
+                                    <input id="idModal" type="text" class="form-control" name="idModal"
+                                        placeholder="Informe o nome...">
+                                </div>
+                            </fieldset>
+                            <div class="form-group mx-sm-3 mb-2">
+                                <input id="nameModal" type="text" class="form-control" name="nameModal"
+                                    placeholder="Informe o nome...">
+                            </div>
+                            <div class="form-group mx-sm-3 mb-2">
+                                <input id="surNameModal" type="text" class="form-control" name="surNameModal"
+                                    placeholder="Informe o sobre-nome...">
+                            </div>
+                            <div class="form-group mx-sm-3 mb-2">
+                                <input id="nickNameModal" type="text" class="form-control" name="nickNameModal"
+                                    placeholder="Informe o apelido">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Fechar</button>
+                        <button id="btnEditModal" type="button" class="btn btn-outline-primary">Salvar mudanças</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
